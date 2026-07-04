@@ -35,69 +35,25 @@
         </section>
 
         <div class="table-section">
-            <div class="card">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nama Barang</th>
-                            <th>Stok</th>
-                            <th>Harga Beli</th>
-                            <th>Harga Jual</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Paracetamol 500mg</td>
-                            <td>250</td>
-                            <td>Rp 2.000</td>
-                            <td>Rp 3.000</td>
-                            <td><span class="status ok">Cukup</span></td>
-                            <td><button class="btn-small">Edit</button> <button class="btn-small delete">Hapus</button></td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Amoxicillin 500mg</td>
-                            <td>120</td>
-                            <td>Rp 5.000</td>
-                            <td>Rp 8.000</td>
-                            <td><span class="status ok">Cukup</span></td>
-                            <td><button class="btn-small">Edit</button> <button class="btn-small delete">Hapus</button></td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>Vitamin C 500mg</td>
-                            <td>15</td>
-                            <td>Rp 1.500</td>
-                            <td>Rp 3.000</td>
-                            <td><span class="status low">Rendah</span></td>
-                            <td><button class="btn-small">Edit</button> <button class="btn-small delete">Hapus</button></td>
-                        </tr>
-                        <tr>
-                            <td>004</td>
-                            <td>Obat Batuk Sirup</td>
-                            <td>80</td>
-                            <td>Rp 15.000</td>
-                            <td>Rp 25.000</td>
-                            <td><span class="status ok">Cukup</span></td>
-                            <td><button class="btn-small">Edit</button> <button class="btn-small delete">Hapus</button></td>
-                        </tr>
-                        <tr>
-                            <td>005</td>
-                            <td>Plaster Luka</td>
-                            <td>5</td>
-                            <td>Rp 500</td>
-                            <td>Rp 1.000</td>
-                            <td><span class="status low">Rendah</span></td>
-                            <td><button class="btn-small">Edit</button> <button class="btn-small delete">Hapus</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="card">
+        <table id="tabel-inventaris">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Barang</th>
+                    <th>Stok</th>
+                    <th>Harga Beli</th>
+                    <th>Harga Jual</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="body-inventaris">
+                <!-- Isi tabel akan diisi otomatis nanti lewat JavaScript -->
+            </tbody>
+        </table>
         </div>
+    </div>
     <div class="form-section card">
         <h3>Tambah Barang Baru</h3>
         
