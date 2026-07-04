@@ -98,17 +98,47 @@
                 </table>
             </div>
         </div>
+    <div class="form-section card">
+        <h3>Tambah Barang Baru</h3>
+        
+        <form id="form-tambah-barang" class="form-card">
+            <fieldset>
+                <legend>Data Barang</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nama-barang">Nama Barang</label>
+                        <input type="text" id="nama-barang" name="nama" placeholder="Contoh: Paracetamol 500mg" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="stok">Stok Awal</label>
+                        <input type="number" id="stok" name="stok" placeholder="0" min="0" required>
+                    </div>
+                </div>
 
-        <div class="form-section card">
-            <h3>Tambah Barang Baru</h3>
-            <form>
-                <input type="text" placeholder="Nama Barang">
-                <input type="number" placeholder="Stok Awal">
-                <input type="number" placeholder="Harga Beli">
-                <input type="number" placeholder="Harga Jual">
-                <button type="submit" class="btn">Simpan</button>
-            </form>
-        </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="harga-beli">Harga Beli (Rp)</label>
+                        <input type="number" id="harga-beli" name="hargaBeli" placeholder="0" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="harga-jual">Harga Jual (Rp)</label>
+                        <input type="number" id="harga-jual" name="hargaJual" placeholder="0" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keterangan">Keterangan</label>
+                    <textarea id="keterangan" name="keterangan" rows="3" placeholder="Opsional..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Simpan Barang</button>
+                <button type="reset" class="btn" style="background-color: #64748b;">Reset</button>
+            </fieldset>
+        </form>
+    </div>
     </main>
     <footer class="footer">
         <div class="footer-inner">

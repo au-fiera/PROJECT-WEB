@@ -100,14 +100,39 @@
         </div>
 
         <div class="form-section card">
-            <h3>Input Transaksi Baru</h3>
-            <form>
-                <input type="text" placeholder="Nama Produk">
-                <input type="number" placeholder="Quantity">
-                <input type="number" placeholder="Harga per Unit">
-                <button type="submit" class="btn">Proses Penjualan</button>
-            </form>
-        </div>
+    <h3>Input Transaksi Baru</h3>
+    
+    <form id="form-transaksi" class="form-card">
+        <fieldset>
+            <legend>Data Penjualan</legend>
+            
+            <div class="form-group">
+                <label for="nama-produk">Nama Produk</label>
+                <input type="text" id="nama-produk" name="produk" placeholder="Contoh: Paracetamol 500mg" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty" name="qty" placeholder="0" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="harga-unit">Harga per Unit (Rp)</label>
+                    <input type="number" id="harga-unit" name="harga" placeholder="0" min="0" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="catatan">Catatan (Opsional)</label>
+                <textarea id="catatan" name="catatan" rows="2" placeholder="Contoh: Pelanggan tetap..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Proses Penjualan</button>
+            <button type="reset" class="btn" style="background-color: #64748b;">Reset</button>
+        </fieldset>
+    </form>
+</div>
     </main>
     <footer class="footer">
         <div class="footer-inner">
