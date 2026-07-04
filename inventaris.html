@@ -27,7 +27,39 @@
             </ul>
         </nav>
     </div>
+    <div id="modal-edit" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Edit Barang</h3>
+            
+            <form id="form-edit">
+                <input type="hidden" id="edit-id">
+                
+                <div class="form-group">
+                    <label for="edit-nama">Nama Barang</label>
+                    <input type="text" id="edit-nama" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edit-stok">Stok</label>
+                        <input type="number" id="edit-stok" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-beli">Harga Beli (Rp)</label>
+                        <input type="number" id="edit-beli" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-jual">Harga Jual (Rp)</label>
+                    <input type="number" id="edit-jual" min="0" required>
+                </div>
 
+                <button type="submit" class="btn">Simpan Perubahan</button>
+                <button type="button" onclick="closeModal()" class="btn" style="background-color: #64748b;">Batal</button>
+            </form>
+        </div>
+    </div>
     <main>
         <section class="content-header">
             <h2>Data Stok Barang</h2>
@@ -65,7 +97,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nama-barang">Nama Barang</label>
-                        <input type="text" id="nama-barang" name="nama" placeholder="Contoh: Paracetamol 500mg" required>
+                        <input type="text" id="nama-barang" name="nama" placeholder="Contoh: Paracetamol" required>
                     </div>
                     
                     <div class="form-group">
@@ -85,12 +117,6 @@
                         <input type="number" id="harga-jual" name="hargaJual" placeholder="0" min="0" required>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="keterangan">Keterangan</label>
-                    <textarea id="keterangan" name="keterangan" rows="3" placeholder="Opsional..."></textarea>
-                </div>
-
                 <button type="submit" class="btn">Simpan Barang</button>
                 <button type="reset" class="btn" style="background-color: #64748b;">Reset</button>
             </fieldset>
