@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sehati Laris - Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-header">
+        <header>
+            <h1>Sehati Laris</h1>
+            <p>Pencatatan Transaksi Penjualan</p>
+        </header>
+
+        <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="inventaris.html">Inventaris</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="content-header">
+            <h2>Data Transaksi Penjualan</h2>
+            <button class="btn">+ Transaksi Baru</button>
+        </section>
+
+        <div class="table-section">
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Transaksi</th>
+                            <th>Produk</th>
+                            <th>Qty</th>
+                            <th>Harga</th>
+                            <th>Total</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Paracetamol 500mg</td>
+                            <td>10</td>
+                            <td>Rp 3.000</td>
+                            <td>Rp 30.000</td>
+                            <td>2026-04-01</td>
+                            <td><button class="btn-small">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Amoxicillin 500mg x5</td>
+                            <td>5</td>
+                            <td>Rp 8.000</td>
+                            <td>Rp 40.000</td>
+                            <td>2026-04-01</td>
+                            <td><button class="btn-small">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Vitamin C 500mg</td>
+                            <td>20</td>
+                            <td>Rp 3.000</td>
+                            <td>Rp 60.000</td>
+                            <td>2026-04-01</td>
+                            <td><button class="btn-small">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Obat Batuk Sirup</td>
+                            <td>2</td>
+                            <td>Rp 25.000</td>
+                            <td>Rp 50.000</td>
+                            <td>2026-04-01</td>
+                            <td><button class="btn-small">Detail</button></td>
+                        </tr>
+                        <tr>
+                            <td>#005</td>
+                            <td>Plaster Luka x50</td>
+                            <td>50</td>
+                            <td>Rp 1.000</td>
+                            <td>Rp 50.000</td>
+                            <td>2026-04-01</td>
+                            <td><button class="btn-small">Detail</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-section card">
+            <h3>Input Transaksi Baru</h3>
+            <form>
+                <input type="text" placeholder="Nama Produk">
+                <input type="number" placeholder="Quantity">
+                <input type="number" placeholder="Harga per Unit">
+                <button type="submit" class="btn">Proses Penjualan</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h2>Sehati Laris</h2>
+                <p>Sistem manajemen inventaris & penjualan terintegrasi untuk bisnis Anda.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="inventaris.html">Inventaris</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sehati Laris - Manajemen Inventaris & Penjualan Terintegrasi</p>
+        </div>
+    </footer>
+</body>
+</html>
