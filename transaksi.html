@@ -29,10 +29,12 @@
     </div>
 
     <main>
-        <section class="content-header">
+       <section class="content-header">
             <h2>Data Transaksi Penjualan</h2>
-            <button class="btn">+ Transaksi Baru</button>
-        </section>
+            <button onclick="document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' })" class="btn">
+                + Transaksi Baru
+        </button>
+</section>
 
         <div class="table-section">
     <div class="card">
@@ -49,7 +51,6 @@
                 </tr>
             </thead>
             <tbody id="body-transaksi">
-                <!-- Data akan diisi oleh JavaScript -->
             </tbody>
         </table>
         </div>
@@ -64,7 +65,9 @@
             
             <div class="form-group">
                 <label for="nama-produk">Nama Produk</label>
-                <input type="text" id="nama-produk" name="produk" placeholder="Contoh: Paracetamol 500mg" required>
+                <select id="nama-produk" name="produk" required>
+                    <option value="">- Pilih Produk -</option>
+                </select>
             </div>
 
             <div class="form-row">
@@ -109,5 +112,6 @@
             <p>&copy; 2026 Sehati Laris - Manajemen Inventaris & Penjualan Terintegrasi</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

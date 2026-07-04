@@ -1,5 +1,3 @@
-// script.js - Sehati Laris
-
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('body-inventaris')) loadInventaris();
     if (document.getElementById('body-transaksi')) loadTransaksi();
@@ -10,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ==================== INVENTARIS ====================
 function loadInventaris() {
     let data = JSON.parse(localStorage.getItem('inventaris')) || [
         {id: "001", nama: "Paracetamol 500mg", stok: 250, beli: 2000, jual: 3000, status: "ok"},
@@ -43,7 +40,6 @@ function renderTabelInventaris(data) {
     });
 }
 
-// Form Tambah Barang
 document.getElementById('form-tambah-barang')?.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -85,7 +81,6 @@ function hapusBarang(id) {
     renderTabelInventaris(data);
 }
 
-// ==================== TRANSAKSI ====================
 function loadTransaksi() {
     let data = JSON.parse(localStorage.getItem('transaksi')) || [];
     renderTabelTransaksi(data);
@@ -112,7 +107,6 @@ function renderTabelTransaksi(data) {
     });
 }
 
-// Form Transaksi
 document.getElementById('form-transaksi')?.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -153,26 +147,21 @@ function hapusTransaksi(index) {
     }
 }
 
-// Update Stats di Beranda
 function updateDashboardStats() {
     const inventaris = JSON.parse(localStorage.getItem('inventaris')) || [];
     const transaksi = JSON.parse(localStorage.getItem('transaksi')) || [];
 
     const cards = document.querySelectorAll('.stats-grid .card p');
 
-    // Total Produk
     if (cards[0]) cards[0].textContent = `${inventaris.length} Item`;
 
-    // Stok Rendah
     const stokRendah = inventaris.filter(item => (item.stok || 0) < 20).length;
     if (cards[1]) cards[1].textContent = `${stokRendah} Item`;
 
-    // Penjualan Hari Ini
     const totalPenjualan = transaksi.reduce((sum, t) => sum + (t.total || 0), 0);
     if (cards[2]) cards[2].textContent = `Rp ${totalPenjualan.toLocaleString()}`;
 }
 
-// Top 5 Produk Terlaris
 function updateTopProducts() {
     const transaksi = JSON.parse(localStorage.getItem('transaksi')) || [];
     const productMap = {};
@@ -205,7 +194,6 @@ function updateTopProducts() {
     });
 }
 
-// Load produk ke dropdown transaksi
 function loadProdukToDropdown() {
     const select = document.getElementById('nama-produk');
     if (!select) return;
@@ -222,7 +210,6 @@ function loadProdukToDropdown() {
     });
 }
 
-// Load produk ke dropdown di Transaksi
 function loadProdukToDropdown() {
     const select = document.getElementById('nama-produk');
     if (!select) return;

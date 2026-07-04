@@ -31,7 +31,9 @@
     <main>
         <section class="content-header">
             <h2>Data Stok Barang</h2>
-            <button class="btn">+ Tambah Barang Baru</button>
+            <button onclick="document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' })" class="btn">
+                + Tambah Barang Baru
+            </button>
         </section>
 
         <div class="table-section">
@@ -49,7 +51,6 @@
                 </tr>
             </thead>
             <tbody id="body-inventaris">
-                <!-- Isi tabel akan diisi otomatis nanti lewat JavaScript -->
             </tbody>
         </table>
         </div>
@@ -115,5 +116,6 @@
             <p>&copy; 2026 Sehati Laris - Manajemen Inventaris & Penjualan Terintegrasi</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
