@@ -307,3 +307,13 @@ function loadProdukToDropdown() {
         select.appendChild(option);
     });
 }
+
+if(nama.length<3){
+
+showToast(
+"Nama terlalu pendek"
+)
+
+return;
+
+}
